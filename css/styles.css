@@ -33,7 +33,44 @@ a{
     text-decoration: none;
 }
 
+h1, h2, h3, h4, h5, h6, p{
+    margin-top: 0;
+    margin-bottom: 0em;
+}
+
+
+/* Утилитные классы */
+
+.container{
+    margin-left: auto;
+    margin-right: auto;
+    width: 1200px;
+    outline: 2px solid tomato;
+}
+
+.list{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+
+
 /* Шапка */
+.main-nav{
+    display: flex;
+    align-items: center;
+}
+
+.site-nav{
+    display: flex;
+    margin-left: 86px;
+}
+
+.contacts-nav{
+    display: flex;
+    margin-left: auto;
+}
 
 .logo{
     font-family: Raleway, sans-serif;
@@ -51,14 +88,23 @@ a{
     color: var(--hover-color);
 }
 
-.site-nav a{
+.site-nav .link{
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    
     font-weight: 500;
     font-size: 14px;
     line-height: 1.15;
     letter-spacing: 0.02em;
 
-    color: var(--secondary-text-color)
+    color: var(--secondary-text-color);
 }
+
+.site-nav .item:not(:last-child){
+    margin-right: 50px;
+}
+
 
 .site-nav a:hover,
 .site-nav a:focus{
@@ -69,7 +115,16 @@ a{
     color: var(--hover-color);
 }
 
-.contacts-nav a{
+.contacts-nav .item:not(:first-child){
+    padding-left: 30px;    
+}
+
+
+.contacts-nav .link{
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+        
     font-weight: 500;
     font-size: 14px;
     line-height: 1.15;
@@ -85,20 +140,34 @@ a{
 
 /* Герой */
 .hero{
+    text-align: center;
+
     background-color: var(--footer-background-site);
 }
 
-.hero h1{
+.hero .title{
+    width: 646px;
+    margin-bottom: 46px;
+    margin-left: auto;
+    margin-right: auto;
+
     font-weight: 900;
     font-size: 44px;
     line-height: 1.36;
     text-align: center;
     letter-spacing: 0.06em;
+    text-transform: uppercase;
 
     color: var(--background-primary);
 }
 
-.hero a{
+.hero .button{
+    display: inline-block;
+    border-radius: 4px;
+    min-width: 200px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    
     font-weight: 700;
     font-size: 16px;
     line-height: 1.87;
@@ -110,15 +179,40 @@ a{
 
 /* Наши преимущества */
 
-.advantage img{
+.advantage .title{
+    display: none;
+}
+
+.features-list{
+    display: flex;
+    margin-top: 94px;
+}
+
+.item-image{
+    display: flex;
+    width: 278px;
+    height: 120px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+
     background-color: var(--background-secondary);
 }
 
-.advantage img:hover{
-    background-color: var(--hover-color);
+.item-image:hover{
+    background-color: var(--hover-color); 
 }
 
-.advantage h3{
+.features-list .item{
+    width: 278px;
+}
+
+.features-list .item + .item{
+    margin-left: 30px;
+}
+.advantage .item-title{
+    margin-top: 30px;
+    
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
@@ -127,7 +221,9 @@ a{
     color: var(--secondary-text-color);
 }
 
-.advantage p{
+.advantage .item-description{
+    margin-top: 10px;
+
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
