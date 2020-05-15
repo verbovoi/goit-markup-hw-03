@@ -1,0 +1,277 @@
+/* 
+Основной цвет текста #757575
+Вторичный цвет текста #212121
+Цвет подсвечивания #2196F3
+Фон шапки #FFFFFF
+Основной фон #E5E5E5
+Вторичный фон #F5F4FA
+ */
+
+ :root {
+     --primary-text-color: #757575;
+     --secondary-text-color: #212121;
+     --background-primary: #FFFFFF;
+     --background-secondary: #F5F4FA;
+     --footer-background-site: #2F303A;
+     --hover-color: #2196F3;
+ }
+
+ body{
+    font-family: 'Roboto', sans-serif; 
+    
+    background-color: var(--background-site);
+     color: var(--primary-text-color);
+
+
+}
+
+ul {
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* Шапка */
+
+.logo{
+    font-family: Raleway, sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+    
+    color: #000000;
+}
+
+.web-logo{
+    padding-right: 5px;
+
+    color: var(--hover-color);
+}
+
+.site-nav a{
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.15;
+    letter-spacing: 0.02em;
+
+    color: var(--secondary-text-color)
+}
+
+.site-nav a:hover,
+.site-nav a:focus{
+    color: var(--hover-color);
+}
+
+.link.current{
+    color: var(--hover-color);
+}
+
+.contacts-nav a{
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.15;
+    letter-spacing: 0.02em;
+
+    color: var(--primary-text-color);
+}
+
+.contacts-nav a:hover,
+.contacts-nav a:focus{
+    color: var(--hover-color);
+}
+
+/* Герой */
+.hero{
+    background-color: var(--footer-background-site);
+}
+
+.hero h1{
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+    text-align: center;
+    letter-spacing: 0.06em;
+
+    color: var(--background-primary);
+}
+
+.hero a{
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.87;
+    letter-spacing: 0.06em;
+
+    color: var(--background-primary);
+    background-color: var(--hover-color);
+}
+
+/* Наши преимущества */
+
+.advantage img{
+    background-color: var(--background-secondary);
+}
+
+.advantage img:hover{
+    background-color: var(--hover-color);
+}
+
+.advantage h3{
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+
+    color: var(--secondary-text-color);
+}
+
+.advantage p{
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+
+}
+
+/* Чем мы занимаемся */
+
+.our-works h2{
+    font-size: 36px;
+    line-height: 1.16;
+    text-align: center;
+    letter-spacing: 0.03em;
+
+    color: var(--secondary-text-color);
+}
+
+.our-works p{
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    color: var(--background-primary);
+    background-color: rgba(47, 48, 58, 0.8);;
+}
+
+/* Наша команда */
+.team{
+    background-color: var(--background-secondary);
+}
+.team h2{
+    font-size: 36px;
+    line-height: 1.16;
+    text-align: center;
+    letter-spacing: 0.03em;
+
+    color: var(--secondary-text-color);
+}
+
+.team h3{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.18;
+    letter-spacing: 0.03em;
+
+    color: var(--secondary-text-color);
+}
+
+.team p{
+    font-size: 16px;
+    line-height: 1.18;
+    letter-spacing: 0.03em;
+}
+
+.team a:hover,
+.team a:focus{
+    background-color: var(--hover-color);
+}
+
+/* Постоянные клиенты */
+
+.clients h2{
+    font-size: 36px;
+    line-height: 1.16;
+    text-align: center;
+    letter-spacing: 0.03em;
+
+    color: var(--secondary-text-color);
+}
+
+.clients a{
+    font-size: 50px;
+}
+
+.clients a:hover,
+.clients a:focus{
+    background-color: var(--hover-color);
+}
+
+/* Подвал */
+
+.footer {
+    background-color: var(--footer-background-site);
+}
+
+.footer .logo{
+    font-size: 22px;
+    line-height: 1.18;
+    letter-spacing: 0.03em;
+
+    color: var(--background-primary);
+}
+
+.contact-info li{
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+
+    color: var(--background-primary);
+}
+
+.contact-info a{
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.footer .follow{
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    color: var(--background-primary);
+}
+
+.footer .copy-right{
+    font-size: 12px;
+    line-height: 2;
+    text-align: center;
+    letter-spacing: 0.03em;
+}
+
+.social-links a{
+    background-color: #43444D ;
+    padding: 6px;
+}
+
+.social-links a:hover,
+.social-links a:focus{
+    background-color: var(--hover-color);
+}
+
+.footer .button{
+    font-weight: 900;
+    font-size: 16px;
+    line-height: 1.87;
+    letter-spacing: 0.06em;
+
+    color: var(--background-primary);
+    background-color: var(--hover-color);
+}
