@@ -232,7 +232,9 @@ h1, h2, h3, h4, h5, h6, p{
 
 /* Чем мы занимаемся */
 
-.our-works h2{
+.our-works .item-title{
+    margin-top: 94px;
+
     font-size: 36px;
     line-height: 1.16;
     text-align: center;
@@ -241,7 +243,23 @@ h1, h2, h3, h4, h5, h6, p{
     color: var(--secondary-text-color);
 }
 
-.our-works p{
+.our-works .type-works{
+    display: flex;
+    margin-top: 50px;
+    margin-bottom: 94px;
+}
+
+.type-works .item:not(:last-child){
+    margin-right: 30px;
+}
+
+.type-works .description{
+    display: flex;
+    width: 380px;
+    height: 70px;
+    align-items: center;
+    justify-content: center;
+    
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
@@ -249,14 +267,19 @@ h1, h2, h3, h4, h5, h6, p{
     text-transform: uppercase;
 
     color: var(--background-primary);
-    background-color: rgba(47, 48, 58, 0.8);;
+    background-color: rgba(47, 48, 58, 0.8);
+
 }
 
 /* Наша команда */
 .team{
     background-color: var(--background-secondary);
+    padding-top: 94px;
+    padding-bottom: 94px;
 }
-.team h2{
+.team .team-title{
+    /* padding-top: 94px; */
+
     font-size: 36px;
     line-height: 1.16;
     text-align: center;
@@ -265,7 +288,25 @@ h1, h2, h3, h4, h5, h6, p{
     color: var(--secondary-text-color);
 }
 
+.team .people-team{
+    display: flex;
+    margin-top: 50px;
+}
+
+.people-team .item{
+    text-align: center;
+    /* margin-bottom: 94px; */
+
+    background-color: var(--background-primary);
+}
+
+.people-team .item + .item{
+    margin-left: 30px;
+}
+
 .team h3{
+    margin-top: 30px;
+
     font-weight: 500;
     font-size: 16px;
     line-height: 1.18;
@@ -275,9 +316,20 @@ h1, h2, h3, h4, h5, h6, p{
 }
 
 .team p{
+    margin-top: 10px;
+
     font-size: 16px;
     line-height: 1.18;
     letter-spacing: 0.03em;
+}
+
+.people-team .social-link{
+    margin-top: 30px;
+    margin-bottom: 24px;
+}
+
+.social-link>a + a{
+    margin-left: 40px;
 }
 
 .team a:hover,
@@ -286,6 +338,9 @@ h1, h2, h3, h4, h5, h6, p{
 }
 
 /* Постоянные клиенты */
+.clients{
+    margin-top: 94px;
+}
 
 .clients h2{
     font-size: 36px;
@@ -294,6 +349,27 @@ h1, h2, h3, h4, h5, h6, p{
     letter-spacing: 0.03em;
 
     color: var(--secondary-text-color);
+}
+
+.clients .partners{
+    display: flex;
+    margin-top: 50px;
+    margin-bottom: 94px;
+}
+
+.partners .item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 175px;
+    height: 90px;
+
+    border: 1px solid #AFB1B8;
+    border-radius: 4px;
+}
+
+.partners .item:not(:last-child){
+    margin-right: 30px;
 }
 
 .clients a{
@@ -309,6 +385,13 @@ h1, h2, h3, h4, h5, h6, p{
 
 .footer {
     background-color: var(--footer-background-site);
+    padding-top: 50px;
+    padding-bottom: 21px;
+}
+
+.footer .flex-container{
+    display: flex;
+    margin-bottom: 28px;
 }
 
 .footer .logo{
@@ -319,7 +402,9 @@ h1, h2, h3, h4, h5, h6, p{
     color: var(--background-primary);
 }
 
-.contact-info li{
+.contact-info .info{
+    margin-top: 10px;
+
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
@@ -346,10 +431,25 @@ h1, h2, h3, h4, h5, h6, p{
 }
 
 .footer .copy-right{
+    margin-top: 18px;
+    
     font-size: 12px;
     line-height: 2;
     text-align: center;
     letter-spacing: 0.03em;
+}
+
+.social-container{
+    margin-left: 180px;
+}
+
+.social-links{
+    display: flex;
+    margin-top: 21px;
+}
+
+.social-links .item:not(:last-child){
+    margin-right: 25px;
 }
 
 .social-links a{
@@ -362,7 +462,36 @@ h1, h2, h3, h4, h5, h6, p{
     background-color: var(--hover-color);
 }
 
+.subscribe-conteiner{
+    margin-left: auto;
+}
+
+.subscribe-form{
+    display: flex;
+    margin-top: 21px;
+}
+
+.email-form{
+    display: flex;
+    align-items: center;
+    width: 270px;
+    height: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    padding-left: 12px;
+
+    font-size: 16px;
+    line-height: 1.83;
+}
+
 .footer .button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 200px;
+    margin-left: 12px;
+    border-radius: 4px;
+    
     font-weight: 900;
     font-size: 16px;
     line-height: 1.87;
