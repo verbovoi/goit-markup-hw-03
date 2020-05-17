@@ -142,7 +142,27 @@ h1, h2, h3, h4, h5, h6, p{
 
 /* Портфолио */
 
+.portfolio .main-title,
+.project .description{
+    display: none;
+}
+
+.container .nav-menu{
+    display: flex;
+    margin-top: 100px;
+    justify-content: center;
+}
+
+.nav-menu .item:not(:last-child){
+    margin-right: 8px;
+}
+
 .portfolio .button{
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 22px;
+    padding-right: 22px;
+    
     font-weight: 500;
     font-size: 16px;
     line-height: 1.62;
@@ -151,12 +171,20 @@ h1, h2, h3, h4, h5, h6, p{
 
     color: var(--secondary-text-color);
     background-color: var(--background-secondary);
+    border-radius: 4px;
 }
 
 .portfolio .button:hover,
 .portfolio .button:focus{
     color: var(--background-primary);
     background-color: var(--hover-color);
+}
+
+.container .project{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    margin-bottom: 94px;
 }
 
 .project h2{
