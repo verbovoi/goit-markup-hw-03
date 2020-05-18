@@ -15,11 +15,13 @@
      --footer-background-site: #2F303A;
      --hover-color: #2196F3;
  }
-
- *{
-    margin: 0;   
-}
-
+ 
+ *,
+ *::before,
+ *::after {
+   box-sizing: border-box;
+   margin: 0;
+ }
 
  body{
     font-family: 'Roboto', sans-serif; 
@@ -50,6 +52,8 @@ h1, h2, h3, h4, h5, h6, p{
     margin-left: auto;
     margin-right: auto;
     width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
     outline: 2px solid tomato;
 }
 
@@ -121,7 +125,7 @@ h1, h2, h3, h4, h5, h6, p{
 }
 
 .contacts-nav .item:not(:first-child){
-    padding-left: 30px;    
+    margin-left: 30px;    
 }
 
 
@@ -145,7 +149,10 @@ h1, h2, h3, h4, h5, h6, p{
 
 /* Герой */
 .hero{
+    display: flex;
+    height: 600px;
     text-align: center;
+    align-items: center;
 
     background-color: var(--footer-background-site);
 }
@@ -170,8 +177,7 @@ h1, h2, h3, h4, h5, h6, p{
     display: inline-block;
     border-radius: 4px;
     min-width: 200px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding: 10px 32px;
     
     font-weight: 700;
     font-size: 16px;
@@ -183,6 +189,10 @@ h1, h2, h3, h4, h5, h6, p{
 }
 
 /* Наши преимущества */
+.advantage{
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
 
 .advantage .title{
     display: none;
@@ -190,16 +200,16 @@ h1, h2, h3, h4, h5, h6, p{
 
 .features-list{
     display: flex;
-    margin-top: 94px;
 }
 
 .item-image{
     display: flex;
-    width: 278px;
+    width: 270px;
     height: 120px;
     align-items: center;
     justify-content: center;
     border-radius: 4px;
+    margin-bottom: 30px;
 
     background-color: var(--background-secondary);
 }
@@ -208,15 +218,11 @@ h1, h2, h3, h4, h5, h6, p{
     background-color: var(--hover-color); 
 }
 
-.features-list .item{
-    width: 278px;
-}
-
 .features-list .item + .item{
     margin-left: 30px;
 }
 .advantage .item-title{
-    margin-top: 30px;
+    margin-bottom: 10px;
     
     font-weight: 700;
     font-size: 14px;
@@ -227,8 +233,6 @@ h1, h2, h3, h4, h5, h6, p{
 }
 
 .advantage .item-description{
-    margin-top: 10px;
-
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
@@ -236,10 +240,14 @@ h1, h2, h3, h4, h5, h6, p{
 }
 
 /* Чем мы занимаемся */
+.our-works{
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
 
 .our-works .item-title{
-    margin-top: 94px;
-
+    
     font-size: 36px;
     line-height: 1.16;
     text-align: center;
@@ -251,7 +259,10 @@ h1, h2, h3, h4, h5, h6, p{
 .our-works .type-works{
     display: flex;
     margin-top: 50px;
-    margin-bottom: 94px;
+}
+
+.type-works img{
+    display: block;
 }
 
 .type-works .item:not(:last-child){
@@ -260,7 +271,7 @@ h1, h2, h3, h4, h5, h6, p{
 
 .type-works .description{
     display: flex;
-    width: 380px;
+    width: 370px;
     height: 70px;
     align-items: center;
     justify-content: center;
@@ -283,8 +294,6 @@ h1, h2, h3, h4, h5, h6, p{
     padding-bottom: 94px;
 }
 .team .team-title{
-    /* padding-top: 94px; */
-
     font-size: 36px;
     line-height: 1.16;
     text-align: center;
@@ -300,13 +309,16 @@ h1, h2, h3, h4, h5, h6, p{
 
 .people-team .item{
     text-align: center;
-    /* margin-bottom: 94px; */
 
     background-color: var(--background-primary);
 }
 
 .people-team .item + .item{
     margin-left: 30px;
+}
+
+.people-team .foto{
+    display: block;
 }
 
 .team h3{
@@ -344,7 +356,8 @@ h1, h2, h3, h4, h5, h6, p{
 
 /* Постоянные клиенты */
 .clients{
-    margin-top: 94px;
+    padding-top: 94px;
+    padding-bottom: 94px;
 }
 
 .clients h2{
@@ -359,7 +372,6 @@ h1, h2, h3, h4, h5, h6, p{
 .clients .partners{
     display: flex;
     margin-top: 50px;
-    margin-bottom: 94px;
 }
 
 .partners .item{
@@ -390,13 +402,14 @@ h1, h2, h3, h4, h5, h6, p{
 
 .footer {
     background-color: var(--footer-background-site);
-    padding-top: 50px;
+    padding-top: 48px;
     padding-bottom: 21px;
 }
 
 .footer .flex-container{
     display: flex;
     margin-bottom: 28px;
+    align-items: baseline;
 }
 
 .footer .logo{
@@ -435,9 +448,12 @@ h1, h2, h3, h4, h5, h6, p{
     color: var(--background-primary);
 }
 
+.copy-block{
+    padding-top: 18px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
 .footer .copy-right{
-    margin-top: 18px;
-    
     font-size: 12px;
     line-height: 2;
     text-align: center;
