@@ -16,8 +16,11 @@
     --hover-color: #2196F3;
 }
 
-*{
-    margin: 0;   
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
 }
 
 body{
@@ -49,6 +52,8 @@ h1, h2, h3, h4, h5, h6, p{
     margin-left: auto;
     margin-right: auto;
     width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
     outline: 2px solid tomato;
 }
 
@@ -121,7 +126,7 @@ h1, h2, h3, h4, h5, h6, p{
 }
 
 .contacts-nav .item:not(:first-child){
-    padding-left: 30px;    
+    margin-left: 30px;    
 }
 
 
@@ -145,6 +150,11 @@ h1, h2, h3, h4, h5, h6, p{
 
 
 /* Портфолио */
+.portfolio{
+    padding-top: 93px;
+    padding-bottom: 94px;
+}
+
 
 .portfolio .main-title,
 .project .description{
@@ -153,7 +163,6 @@ h1, h2, h3, h4, h5, h6, p{
 
 .container .nav-menu{
     display: flex;
-    margin-top: 100px;
     justify-content: center;
 }
 
@@ -188,15 +197,24 @@ h1, h2, h3, h4, h5, h6, p{
     display: flex;
     flex-wrap: wrap;
     margin-top: 50px;
-    margin-bottom: 94px;
+}
+
+.main-project-description{
+    border: 1px solid #EEEEEE;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.project img{
+    display: block;
 }
 
 .project .item{
     margin-right: 30px;
     margin-bottom: 30px;
     box-sizing: border-box;
-    width: 380px;
-    border: 1px solid #EEEEEE;
+    width: 370px;
+    /* border: 1px solid #EEEEEE; */
 }
 
 .project .item:nth-child(3n){
@@ -208,8 +226,8 @@ h1, h2, h3, h4, h5, h6, p{
 }
 
 .project .project-name{
-    margin-left: 24px;
-    margin-right: 24px;
+    margin-left: 21px;
+    margin-right: 21px;
     margin-top: 20px;
     
     font-weight: 700;
@@ -221,8 +239,8 @@ h1, h2, h3, h4, h5, h6, p{
 }
 
 .project .project-type{
-    margin-left: 24px;
-    margin-right: 24px;
+    margin-left: 21px;
+    margin-right: 21px;
     margin-top: 4px;
     margin-bottom: 20px;
 
@@ -250,13 +268,14 @@ h1, h2, h3, h4, h5, h6, p{
 
 .footer {
     background-color: var(--footer-background-site);
-    padding-top: 50px;
+    padding-top: 48px;
     padding-bottom: 21px;
 }
 
 .footer .flex-container{
     display: flex;
     margin-bottom: 28px;
+    align-items: baseline;
 }
 
 .footer .logo{
@@ -295,9 +314,12 @@ h1, h2, h3, h4, h5, h6, p{
     color: var(--background-primary);
 }
 
+.copy-block{
+    padding-top: 18px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
 .footer .copy-right{
-    margin-top: 18px;
-    
     font-size: 12px;
     line-height: 2;
     text-align: center;
@@ -305,7 +327,7 @@ h1, h2, h3, h4, h5, h6, p{
 }
 
 .social-container{
-    margin-left: 180px;
+    margin-left: 69px;
 }
 
 .social-links{
@@ -339,7 +361,7 @@ h1, h2, h3, h4, h5, h6, p{
 .email-form{
     display: flex;
     align-items: center;
-    width: 270px;
+    width: 358px;
     height: 50px;
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 4px;
@@ -364,4 +386,4 @@ h1, h2, h3, h4, h5, h6, p{
 
     color: var(--background-primary);
     background-color: var(--hover-color);
-}
+
