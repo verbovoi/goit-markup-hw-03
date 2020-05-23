@@ -272,7 +272,9 @@ h1, h2, h3, h4, h5, h6, p{
 .type-works .description{
     display: flex;
     width: 370px;
-    height: 70px;
+    /* height: 70px; */
+    padding-top: 24px;
+    padding-bottom: 24px;
     align-items: center;
     justify-content: center;
     
@@ -309,6 +311,7 @@ h1, h2, h3, h4, h5, h6, p{
 
 .people-team .item{
     text-align: center;
+    padding-bottom: 24px;
 
     background-color: var(--background-primary);
 }
@@ -342,7 +345,7 @@ h1, h2, h3, h4, h5, h6, p{
 
 .people-team .social-link{
     margin-top: 30px;
-    margin-bottom: 24px;
+    /* margin-bottom: 24px; */
 }
 
 .social-link>a + a{
